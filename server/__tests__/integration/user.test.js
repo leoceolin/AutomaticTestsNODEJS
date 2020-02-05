@@ -13,7 +13,7 @@ describe('User', () => {
 
   it('should encrypt user password when new user created', async () => {
     const user = await factory.create('User', {
-      password: '12346',
+      password: '123456',
     });
 
     const compareHash = await bcrypt.compare('123456', user.password_hash);
